@@ -65,7 +65,7 @@ return {
         }),
         util.make_section("Built-in", {
           { "n  - New file", "ene | startinsert" },
-          { "q  - Quitn  - New file", "qa" },
+          { "q  - Quit", "qa" },
         }),
         util.make_section("Config", {
           { "c  - Config", LazyVim.pick.config_files() },
