@@ -39,6 +39,9 @@ option_as_alt = "Both"
 x = 0
 y = 0
 
+[keyboard]
+bindings = [{ key = "Slash", mods = "Control", chars = "\u001f" }]
+
 # Theme (Catppuccin)
 [colors.primary]
 background = "#1e1e2e"
