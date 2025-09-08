@@ -13,7 +13,10 @@ return {
     opts = {
       extensions = {
         history = {
-          opts = { keymap = "<leader>ah" },
+          opts = {
+            keymap = "<leader>ah",
+            continue_last_chat = true,
+          },
         },
       },
       display = {
