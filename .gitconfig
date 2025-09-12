@@ -1,0 +1,11 @@
+[user]
+  name = Lambdaphile
+  email = lambdaphile@pm.me
+
+[core]
+  ignorecase = false
+  sshCommand = "ssh -i ~/.ssh/github_personal"
+  excludesfile = ~/.gitignore
+
+[init]
+  defaultBranch = main
