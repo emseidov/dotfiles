@@ -23,4 +23,4 @@ _darcs
 
 .DS_Store
 /assets
-*.log
+.*\.log$
