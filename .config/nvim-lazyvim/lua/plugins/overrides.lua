@@ -53,7 +53,7 @@ return {
   },
 
   {
-    "echasnovski/mini.starter",
+    "nvim-mini/mini.starter",
     opts = {
       header = util.make_header(),
       items = {
