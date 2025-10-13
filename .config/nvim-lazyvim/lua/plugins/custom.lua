@@ -15,7 +15,7 @@ return {
         history = {
           opts = {
             keymap = "<leader>ah",
-            continue_last_chat = true,
+            continue_last_chat = false,
           },
         },
       },
