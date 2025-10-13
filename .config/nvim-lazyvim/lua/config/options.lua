@@ -4,3 +4,4 @@
 -- Add any additional options here.
 vim.opt.relativenumber = true
 vim.o.equalalways = false
+vim.opt.undolevels = 10000
