@@ -53,4 +53,7 @@ return {
       },
     },
   },
+  {
+    "gpanders/nvim-parinfer",
+  },
 }
