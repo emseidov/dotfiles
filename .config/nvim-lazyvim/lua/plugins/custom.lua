@@ -56,4 +56,7 @@ return {
   {
     "gpanders/nvim-parinfer",
   },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+  },
 }
