@@ -3,9 +3,16 @@ local M = {}
 M.SNACKS = {
   picker = {
     source_config = {
-      hidden = true,
-      ignored = true,
-      exclude = { ".git", ".DS_Store" },
+      -- hidden = true,
+      -- ignored = true,
+      -- exclude = {
+      --   ".git",
+      --   ".DS_Store",
+      --   "node_modules",
+      --   ".clj-kondo",
+      --   ".shadow-cljs",
+      --   "target",
+      -- },
     },
     sources = { "explorer", "files", "grep", "grep_buffer", "grep_word" },
   },
