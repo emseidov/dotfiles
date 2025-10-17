@@ -9,7 +9,16 @@ return {
 
   {
     "catppuccin/nvim",
-    opts = { flavour = "mocha" },
+    opts = {
+      flavour = "mocha",
+      highlight_overrides = {
+        mocha = function(mocha)
+          return {
+            ["@string.special.symbol"] = { fg = mocha.mauve },
+          }
+        end,
+      },
+    },
   },
 
   {
@@ -91,12 +100,30 @@ return {
     "folke/snacks.nvim",
     opts = function(_, opts)
       local sources = opts.picker.sources or {}
+      local matcher = opts.picker.matcher or {}
+      local win = opts.picker.win or {}
 
       for _, name in ipairs(const.SNACKS.picker.sources) do
         sources[name] = const.SNACKS.picker.source_config
       end
 
+      matcher.history_bonus = true
+      matcher.frecency = true
+      matcher.cwd_bonus = true
+      matcher.sort_empty = true
+
+      win = {
+        input = {
+          keys = {
+            ["<a-Up>"] = { "history_back", mode = { "i", "n" } },
+            ["<a-Down>"] = { "history_forward", mode = { "i", "n" } },
+          },
+        },
+      }
+
       opts.picker.sources = sources
+      opts.picker.matcher = matcher
+      opts.picker.win = win
 
       return opts
     end,
@@ -106,7 +133,12 @@ return {
     "saghen/blink.cmp",
     opts = {
       completion = {
-        ghost_text = { enabled = false },
+        ghost_text = {
+          enabled = false,
+        },
+        menu = {
+          auto_show = false,
+        },
       },
     },
   },
